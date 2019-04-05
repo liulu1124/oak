@@ -321,8 +321,8 @@ static const ::grpc::ByteBuffer Wrap(const std::vector<char>* bytes) {
 }
 
 // TODO: Refactor Oak Module code into a separate class.
-void OakNode::ProcessModuleCall(::grpc::GenericServerContext* context, ::grpc::ByteBuffer* request,
-                                ::grpc::ByteBuffer* response) {
+void OakNode::ProcessModuleInvocation(::grpc::GenericServerContext* context,
+                                      ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) {
   // TODO: Synchronise this method.
   LOG(INFO) << "Handling gRPC call: " << context->method();
   server_context_ = context;

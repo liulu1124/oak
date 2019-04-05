@@ -27,9 +27,9 @@ class OakNode final : public ::oak::Node::Service {
  public:
   OakNode(const std::string& node_id, const std::string& module);
 
-  // Performs an Oak Module invocation.
-  void ProcessModuleCall(::grpc::GenericServerContext* context, ::grpc::ByteBuffer* request,
-                         ::grpc::ByteBuffer* response);
+  // Performs an Oak Module invocation, executing the request in the Oak VM.
+  void ProcessModuleInvocation(::grpc::GenericServerContext* context, ::grpc::ByteBuffer* request,
+                               ::grpc::ByteBuffer* response);
 
  private:
   ::grpc::Status GetAttestation(::grpc::ServerContext* context,

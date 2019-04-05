@@ -62,9 +62,9 @@ cc_library(
 )
 
 cc_library(
-    name = "grpc_stream",
-    srcs = ["grpc_stream.cc"],
-    hdrs = ["grpc_stream.h"],
+    name = "module_invocation",
+    srcs = ["module_invocation.cc"],
+    hdrs = ["module_invocation.h"],
     deps = [
         ":oak_node",
         "@com_github_grpc_grpc//:grpc++",
@@ -77,7 +77,7 @@ cc_library(
         "enclave_server.h",
     ],
     deps = [
-        ":grpc_stream",
+        ":module_invocation",
         ":oak_node",
         "//oak/proto:enclave_proto_cc",
         "@com_github_grpc_grpc//:grpc++",
