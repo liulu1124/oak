@@ -25,7 +25,7 @@
 #include "oak/client/manager_client.h"
 #include "oak/client/node_client.h"
 
-DEFINE_string(manager_address, "127.0.0.1:8888", "Address of the Oak Manager to connect to");
+DEFINE_string(manager_address, "127.0.0.1:9999", "Address of the Oak Manager to connect to");
 DEFINE_string(module, "", "File containing the compiled WebAssembly module");
 
 using ::oak::examples::hello_world::HelloWorld;

@@ -49,7 +49,7 @@ int main(int argc, char* argv[]) {
   LOG(INFO) << "Starting gRPC server";
   ::grpc::ServerBuilder builder;
   int selected_port;
-  builder.AddListeningPort("[::]:8888", ::grpc::InsecureServerCredentials(), &selected_port);
+  builder.AddListeningPort("[::]:9999", ::grpc::InsecureServerCredentials(), &selected_port);
   builder.RegisterService(service.get());
   std::unique_ptr<::grpc::Server> server = builder.BuildAndStart();
   LOG(INFO) << "gRPC server started on port " << selected_port;
